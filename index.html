@@ -17,22 +17,51 @@
     }
     a { color: #38bdf8; text-decoration: none; }
 
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2, 6, 23, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1f2937;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-weight: 700; font-size: 18px; }
+
+    .nav-links a {
+      margin-left: 24px;
+      font-size: 15px;
+      color: #9ca3af;
+      position: relative;
+    }
+
+    .resume-btn {
+      padding: 8px 14px;
+      border: 1px solid #38bdf8;
+      border-radius: 8px;
+      color: #38bdf8 !important;
+      font-weight: 500;
+    }
+
+    .resume-btn:hover { background: rgba(56, 189, 248, 0.1); }
+    .resume-btn::after { display: none; }
+
     /* Layout */
     .container { max-width: 1100px; margin: auto; padding: 80px 24px; }
     section { margin-bottom: 120px; }
 
     /* Hero */
-    .hero h1 {
-      font-size: 56px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
+    .hero h1 { font-size: 56px; line-height: 1.1; margin-bottom: 20px; }
     .hero span { color: #38bdf8; }
-    .hero p {
-      font-size: 20px;
-      color: #9ca3af;
-      max-width: 700px;
-    }
+    .hero p { font-size: 20px; color: #9ca3af; max-width: 700px; }
     .hero-links { margin-top: 32px; }
     .hero-links a {
       display: inline-block;
@@ -42,11 +71,7 @@
       border: 1px solid #1f2937;
     }
 
-    /* Section headers */
-    h2 {
-      font-size: 32px;
-      margin-bottom: 40px;
-    }
+    h2 { font-size: 32px; margin-bottom: 40px; }
 
     /* Cards */
     .grid {
@@ -58,8 +83,16 @@
       background: #020617;
       border: 1px solid #1f2937;
       border-radius: 16px;
-      padding: 28px;
+      padding: 24px;
     }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #1f2937;
+    }
+
     .card h3 { margin-top: 0; }
     .card p { color: #9ca3af; }
 
@@ -74,7 +107,6 @@
       border: 1px solid #1f2937;
     }
 
-    /* Footer */
     footer {
       padding: 60px 24px;
       text-align: center;
@@ -88,6 +120,19 @@
   </style>
 </head>
 <body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Nazmin</div>
+      <div class="nav-links">
+        <a href="resume.pdf" class="resume-btn" target="_blank">Resume</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
   <div class="container hero">
     <h1>Hi, I’m <span>Nazmin</span>.<br/>I build secure mobile apps.</h1>
@@ -103,7 +148,7 @@
   </div>
 
   <div class="container">
-    <section>
+    <section id="about">
       <h2>About</h2>
       <p style="max-width: 800px; color:#9ca3af;">
         I am a result-driven Mobile Application Developer with hands-on experience in building
@@ -112,7 +157,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Experience</h2>
       <div class="grid">
         <div class="card">
@@ -142,28 +187,42 @@
       </div>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <div class="grid">
         <div class="card">
+          <img src="images/ios-security-app.png" alt="Mobile Security iOS App Screenshot" />
           <h3>Mobile Security iOS App</h3>
           <p>
             Enterprise-grade iOS application with encrypted APIs, certificate pinning,
             biometric authentication, and QR-based OTP approval.
           </p>
-        </div>
-        <div class="card">
-          <h3>SwiftUI + Combine Demo</h3>
           <p>
-            Personal project exploring reactive UI patterns using SwiftUI and Combine.
-            Focused on clean architecture and state management.
+            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
           </p>
         </div>
+
         <div class="card">
+          <img src="images/swiftui-combine-app.png" alt="SwiftUI Combine App Screenshot" />
+          <h3>SwiftUI + Combine Demo</h3>
+          <p>
+            Personal iOS project exploring reactive UI patterns using SwiftUI and Combine,
+            with clean MVVM architecture and state management.
+          </p>
+          <p>
+            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="images/prezence-android-app.png" alt="Prezence Android App Screenshot" />
           <h3>Prezence – Attendance App</h3>
           <p>
             Android application built from scratch with payments, maps, QR scanning,
-            and Firebase notifications.
+            Firebase notifications, and AWS GraphQL APIs.
+          </p>
+          <p>
+            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
           </p>
         </div>
       </div>
@@ -178,6 +237,20 @@
         <span>Splunk</span><span>New Relic</span><span>AppDynamics</span>
         <span>Azure DevOps</span>
       </div>
+    </section>
+  </div>
+
+  <section id="contact">
+      <h2>Contact</h2>
+      <p style="color:#9ca3af; max-width:600px;">
+        I’m open to iOS and Mobile Developer opportunities. Feel free to reach out for
+        collaboration or full-time roles.
+      </p>
+      <p>
+        <a href="mailto:nazminparween23@gmail.com">nazminparween23@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/nazmin123" target="_blank">GitHub</a>
+      </p>
     </section>
   </div>
 
