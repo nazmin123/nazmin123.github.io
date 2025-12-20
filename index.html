@@ -3,139 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nazmin Parween | Senior Mobile Developer</title>
-  <meta name="description" content="Nazmin Parween – Senior Mobile App Developer (iOS, Android). Secure, scalable mobile applications with Swift, UIKit, SwiftUI, and Clean Architecture." />
+  <title>Nazmin Parween | Mobile Developer</title>
+  <meta name="description" content="Nazmin Parween – Senior Mobile Developer (iOS & Android). Secure, scalable, production-grade mobile applications." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      background: #0f172a;
+      font-family: 'Inter', sans-serif;
+      background: #0b0f19;
       color: #e5e7eb;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     a { color: #38bdf8; text-decoration: none; }
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #020617, #020617);
+
+    /* Layout */
+    .container { max-width: 1100px; margin: auto; padding: 80px 24px; }
+    section { margin-bottom: 120px; }
+
+    /* Hero */
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
-    header h1 { font-size: 40px; margin-bottom: 10px; }
-    header p { font-size: 18px; color: #94a3b8; }
-    .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
-    section { margin-bottom: 60px; }
-    h2 { font-size: 28px; border-bottom: 2px solid #1e293b; padding-bottom: 10px; margin-bottom: 20px; }
-    h3 { font-size: 20px; margin-bottom: 5px; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
+    .hero span { color: #38bdf8; }
+    .hero p {
+      font-size: 20px;
+      color: #9ca3af;
+      max-width: 700px;
+    }
+    .hero-links { margin-top: 32px; }
+    .hero-links a {
+      display: inline-block;
+      margin-right: 20px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 1px solid #1f2937;
+    }
+
+    /* Section headers */
+    h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .card {
+      background: #020617;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .card h3 { margin-top: 0; }
+    .card p { color: #9ca3af; }
+
+    /* Skills */
     .skills span {
       display: inline-block;
-      background: #020617;
-      border: 1px solid #1e293b;
+      margin: 6px 8px 0 0;
       padding: 6px 12px;
-      margin: 6px;
-      border-radius: 6px;
       font-size: 14px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
+      border-radius: 999px;
       background: #020617;
-      color: #64748b;
+      border: 1px solid #1f2937;
+    }
+
+    /* Footer */
+    footer {
+      padding: 60px 24px;
+      text-align: center;
+      border-top: 1px solid #1f2937;
+      color: #6b7280;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 40px; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Nazmin Parween</h1>
-  <p>Senior Mobile App Developer | iOS • Android • Secure Systems</p>
-  <p>
-    <a href="mailto:nazminparween23@gmail.com">Email</a> ·
-    <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/" target="_blank">LinkedIn</a> ·
-    <a href="https://github.com/nazmin123" target="_blank">GitHub</a>
-  </p>
-</header>
-
-<div class="container">
-
-<section>
-  <h2>About Me</h2>
-  <p>
-    Result-driven Mobile Application Developer with 5+ years of experience across iOS, Android,
-    and Site Reliability Engineering, including 3+ years of professional iOS development.
-    I specialize in building secure, scalable, and production-ready mobile applications
-    using Swift, UIKit, and Clean Architecture, with hands-on experience in SwiftUI and Combine.
-  </p>
-</section>
-
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Swift</span><span>UIKit</span><span>SwiftUI</span><span>Combine</span>
-    <span>MVVM</span><span>Clean Architecture</span><span>XCTest</span>
-    <span>Kotlin</span><span>Android SDK</span><span>Firebase</span>
-    <span>Splunk</span><span>New Relic</span><span>AppDynamics</span>
-    <span>Azure DevOps</span>
+  <div class="container hero">
+    <h1>Hi, I’m <span>Nazmin</span>.<br/>I build secure mobile apps.</h1>
+    <p>
+      Senior Mobile Developer with 5+ years of experience across iOS, Android, and Site Reliability Engineering.
+      Specialized in Swift, UIKit, MVVM + Clean Architecture, and production-grade security.
+    </p>
+    <div class="hero-links">
+      <a href="mailto:nazminparween23@gmail.com">Email</a>
+      <a href="https://github.com/nazmin123" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/" target="_blank">LinkedIn</a>
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Experience</h2>
+  <div class="container">
+    <section>
+      <h2>About</h2>
+      <p style="max-width: 800px; color:#9ca3af;">
+        I am a result-driven Mobile Application Developer with hands-on experience in building
+        secure, scalable, and high-performance applications. My background in Site Reliability
+        Engineering helps me design systems that are observable, resilient, and production-ready.
+      </p>
+    </section>
 
-  <h3>Senior System Engineer – iOS Developer | Infosys</h3>
-  <p><em>Feb 2023 – Present</em></p>
-  <ul>
-    <li>Developed secure iOS features using Swift and UIKit with MVVM + Clean Architecture.</li>
-    <li>Implemented OTP approval via QR code scanning with encrypted APIs and certificate pinning.</li>
-    <li>Integrated Face ID / Touch ID and secure local storage.</li>
-    <li>Wrote unit tests using XCTest and OHHTTPStubs.</li>
-    <li>Integrated AppDynamics for monitoring and crash analysis.</li>
-  </ul>
+    <section>
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Senior System Engineer – iOS</h3>
+          <p><strong>Infosys</strong> · Feb 2023 – Present</p>
+          <p>
+            Building secure enterprise iOS applications using Swift, UIKit, MVVM + Clean Architecture.
+            Implemented certificate pinning, biometric authentication, and OTP workflows.
+          </p>
+        </div>
+        <div class="card">
+          <h3>System Engineer – SRE</h3>
+          <p><strong>Infosys</strong> · Dec 2021 – Jan 2023</p>
+          <p>
+            Monitored large-scale production systems using Splunk, New Relic, and AppDynamics.
+            Performed root cause analysis for crashes and performance issues.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Android Developer</h3>
+          <p><strong>Mobil80</strong> · Jun 2020 – Nov 2021</p>
+          <p>
+            Developed and published Android applications from scratch with payments,
+            QR scanning, Firebase, and AWS GraphQL APIs.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <h3>System Engineer – Site Reliability Engineer | Infosys</h3>
-  <p><em>Dec 2021 – Jan 2023</em></p>
-  <ul>
-    <li>Monitored production systems using Splunk and New Relic.</li>
-    <li>Performed root cause analysis for crashes and performance issues.</li>
-    <li>Supported deployments and post-release incidents.</li>
-  </ul>
+    <section>
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Mobile Security iOS App</h3>
+          <p>
+            Enterprise-grade iOS application with encrypted APIs, certificate pinning,
+            biometric authentication, and QR-based OTP approval.
+          </p>
+        </div>
+        <div class="card">
+          <h3>SwiftUI + Combine Demo</h3>
+          <p>
+            Personal project exploring reactive UI patterns using SwiftUI and Combine.
+            Focused on clean architecture and state management.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Prezence – Attendance App</h3>
+          <p>
+            Android application built from scratch with payments, maps, QR scanning,
+            and Firebase notifications.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <h3>Software Engineer – Android Developer | Mobil80</h3>
-  <p><em>Jun 2020 – Nov 2021</em></p>
-  <ul>
-    <li>Built Android application from scratch using MVC.</li>
-    <li>Integrated AWS GraphQL APIs, Firebase, QR scanning, Google Maps.</li>
-    <li>Implemented Razorpay and Stripe payments.</li>
-    <li>Published and maintained app on Google Play Store.</li>
-  </ul>
-</section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Swift</span><span>UIKit</span><span>SwiftUI</span><span>Combine</span>
+        <span>MVVM</span><span>Clean Architecture</span><span>XCTest</span>
+        <span>Kotlin</span><span>Android SDK</span><span>Firebase</span>
+        <span>Splunk</span><span>New Relic</span><span>AppDynamics</span>
+        <span>Azure DevOps</span>
+      </div>
+    </section>
+  </div>
 
-<section>
-  <h2>Projects</h2>
-  <h3>SwiftUI + Combine Demo App</h3>
-  <ul>
-    <li>Modern iOS demo app built with SwiftUI and Combine.</li>
-    <li>Reactive API integration and state management.</li>
-    <li>MVVM architecture with clean separation of concerns.</li>
-    <li>Source code available on GitHub.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Education & Certifications</h2>
-  <ul>
-    <li>B.Tech in Computer Science – BPUT, Rourkela (CGPA: 8.45)</li>
-    <li>Infosys Certified Swift iOS Developer</li>
-    <li>Infosys Certified Kotlin, Flutter & React Developer</li>
-    <li>Infosys Global Agile Developer Certification</li>
-  </ul>
-</section>
-
-</div>
-
-<footer>
-  <p>© 2025 Nazmin Parween · Immediate Joiner</p>
-</footer>
+  <footer>
+    <p>© 2025 Nazmin Parween · Senior Mobile Developer · Immediate Joiner</p>
+  </footer>
 
 </body>
 </html>
