@@ -1,0 +1,15 @@
+.btn-primary {
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #0ea5e9, var(--accent-blue));
+  color: var(--bg-primary);
+  font-weight: 600;
+  box-shadow: 0 0 24px rgba(56,189,248,0.35);
+}
+
+.card {
+  background: rgba(2,6,23,0.9);
+  border: 1px solid var(--border-muted);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
