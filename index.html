@@ -3,216 +3,560 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nazmin Parween | Mobile Developer</title>
+  <meta name="description" content="Nazmin Parween – Senior Mobile Developer (iOS & Android). Secure, scalable, production-grade mobile applications." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top left, #0f172a, #020617 60%);
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+    a { color: #38bdf8; text-decoration: none; }
 
-  <title>Nazmin Parween | Senior Mobile Developer</title>
-  <meta name="description"
-        content="Nazmin Parween – Senior Mobile Application Developer (iOS & Android). Secure, scalable, production-grade mobile apps." />
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2, 6, 23, 0.75);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1f2937;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-weight: 700; font-size: 18px; }
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    .nav-links a {
+      margin-left: 24px;
+      font-size: 15px;
+      color: #9ca3af;
+      position: relative;
+    }
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/timeline.css">
+    .resume-btn {
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      color: #020617 !important;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0 0 24px rgba(14,165,233,0.35);
+    }
+/* Experience Section */
+.experience-section {
+  padding: 120px 24px;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 80px;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Vertical Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #38bdf8,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+/* Experience Card */
+.experience-card {
+  width: 460px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+}
+
+/* Role Header */
+.role {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.role img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.role h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.company {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Description */
+.description {
+  font-size: 14px;
+  color: #cbd5f5;
+  margin: 12px 0;
+}
+
+/* Bullet Points */
+.experience-card ul {
+  padding-left: 18px;
+}
+
+.experience-card li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #e5e7eb;
+}
+
+/* Common */
+.timeline-date {
+  position: absolute;
+  top: 53%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+/* LEFT card → date on RIGHT side of timeline */
+.timeline-item.left .timeline-date {
+  left: 53%;
+  margin-left: 36px;
+  text-align: left;
+}
+
+/* RIGHT card → date on LEFT side of timeline */
+.timeline-item.right .timeline-date {
+  right: 53%;
+  margin-right: 36px;
+  text-align: right;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+
+  .timeline-date {
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: 12px;
+  }
+
+  .experience-card {
+    width: 100%;
+  }
+}
+
+    /* Layout */
+    .container { max-width: 1100px; margin: auto; padding: 120px 24px; }
+    section { margin-bottom: 120px; }
+
+    /* Hero */
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-bottom: 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: #22d3ee;
+      border: 1px solid rgba(34,211,238,0.3);
+      background: rgba(14,165,233,0.08);
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      line-height: 1.05;
+      margin-bottom: 28px;
+    }
+
+    .grad1 {
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grad2 {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #9ca3af;
+      max-width: 720px;
+    }
+
+    .hero-links { margin-top: 40px; }
+    .hero-links a {
+      display: inline-block;
+      margin-right: 16px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #1f2937;
+    }
+
+    h2 { font-size: 32px; margin-bottom: 40px; }
+
+    
+
+/* About Section */
+.about-section {
+position: relative;
+}
+
+
+.about-header {
+text-align: left;
+margin-bottom: 80px;
+}
+
+
+.about-title {
+font-size: 32px;
+background: linear-gradient(135deg, #22c55e, #38bdf8);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+
+.about-content {
+display: grid;
+grid-template-columns: 360px 1fr;
+gap: 64px;
+align-items: center;
+}
+
+
+.about-image img {
+width: 100%;
+border-radius: 20px;
+border: 1px solid #1f2937;
+}
+    
+    
+    /* Skills */
+    .skills span {
+      display: inline-block;
+      margin: 6px 8px 0 0;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #1f2937;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: rgba(2,6,23,0.9);
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border: 1px solid #1f2937;
+    }
+
+    .card p { color: #9ca3af; }
+
+    footer {
+      padding: 60px 24px;
+      text-align: center;
+      border-top: 1px solid #1f2937;
+      color: #6b7280;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+    }
+     .contact p { 
+       display: flex;
+      justify-content: center;
+      align-items: center; 
+     }
+    .contact-title {
+      letter-spacing: 0.3em;
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 32px;
+    }
+    .contact-icons a:hover {
+      color: #38bdf8;
+      transform: translateY(-4px);
+    }
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+     }
+
+   .contact-icons a {
+    color: #e5e7eb;
+    transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 42px; }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">Nazmin</div>
-
+      <div class="logo">Nazmin Mobile App Developer</div>
       <div class="nav-links">
-        <a href="resume.pdf" class="btn-primary" target="_blank">Resume</a>
+        <a href="resume.pdf" class="resume-btn" target="_blank">Resume</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- ================= HERO ================= -->
-  <header class="container hero">
+  <div class="container hero">
     <span class="badge">● Mobile-first. Security-driven.</span>
-
     <h1>
-      Build. <span class="grad1">Secure.</span><br />
+      Build. <span class="grad1">Secure.</span><br/>
       <span class="grad2">Mobile Apps.</span>
     </h1>
-
     <p>
-      I’m a Mobile Application Developer with a strong focus on iOS, building applications
-      that are reliable, secure, and designed for real users. From UIKit and SwiftUI
-      interfaces to production-grade security, testing, and monitoring, I work across the
-      full mobile app lifecycle.
-      <br /><br />
-      <strong class="highlight">
-        I care deeply about performance, security, and clean architecture.
-      </strong>
+      I’m a Mobile Application Developer with a strong focus on iOS, building applications that are
+      reliable, secure, and designed for real users. From crafting smooth UIKit and SwiftUI
+      experiences to implementing production-grade security, testing, and monitoring, I enjoy
+      working across the full lifecycle of a mobile app.
+      <br/><br/>
+      <strong style="color:#22d3ee">I care about performance, security, and clean architecture.</strong>
     </p>
-
     <div class="hero-links">
-      <a href="resume.pdf" class="btn-primary" target="_blank">Resume ⬇</a>
-      <a href="#projects" class="btn-secondary">View Projects</a>
+      <a class="resume-btn" href="resume.pdf" target="_blank">Resume ⬇</a>
+      <a href="#projects">View projects</a>
     </div>
-  </header>
+  </div>
+  </div>
 
-  <!-- ================= ABOUT ================= -->
-  <main class="container">
-
+  <div class="container">
     <section id="about" class="about-section">
-      <div class="about-header">
-        <h2 class="about-title">About Me</h2>
-        <p class="about-subtitle">
-          Building secure, scalable mobile applications with real-world impact
-        </p>
-      </div>
+<div class="about-header">
+<h2 class="about-title">About Me</h2>
+</div>
 
-      <div class="about-content">
-        <div class="about-image">
-          <img src="images/profile.jpg" alt="Nazmin Parween" />
-        </div>
 
-        <div class="about-text">
-          <h3>Nazmin Parween</h3>
-          <p class="about-role">Senior Mobile Application Developer</p>
+<div class="about-content">
+<div class="about-image">
+<img src="images/profile.jpeg" alt="Nazmin Parween" />
+</div>
 
-          <p>
-            I’m a mobile developer focused on building
-            <strong>secure, scalable, and production-ready</strong> applications.
-            My primary expertise is <strong>iOS development</strong>, working across
-            UIKit and SwiftUI to deliver smooth, reliable user experiences.
-          </p>
 
-          <p>
-            With a background in <strong>Site Reliability Engineering</strong>, I bring
-            strong practices around performance, observability, and long-term
-            maintainability into mobile development.
-          </p>
+<div class="about-text">
+<h3>Nazmin Parween</h3>
+<p class="about-role">Senior Mobile Application Developer</p>
 
-          <p class="about-highlight">
-            Let’s build mobile apps that users trust and enjoy.
-          </p>
 
-          <div class="about-now">
-            <h4>What I’m doing now</h4>
-            <ul>
-              <li>Building enterprise-grade iOS applications</li>
-              <li>Improving performance, security, and stability</li>
-              <li>Learning advanced SwiftUI and modern iOS architecture</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+<p>
+I’m a mobile developer focused on building <strong>secure, scalable, and production-ready</strong>
+applications. My primary expertise is in <strong>iOS development</strong>, where I work across
+UIKit and SwiftUI to deliver smooth, reliable user experiences.
+</p>
 
-    <!-- ================= EXPERIENCE ================= -->
+
+<p>
+With a background in <strong>Site Reliability Engineering</strong>, I approach mobile development
+with a strong emphasis on performance, observability, and long-term maintainability. I enjoy
+working close to real users and solving problems that matter.
+</p>
+
+
+<p class="about-highlight">Let’s build mobile apps that users trust and enjoy.</p>
+
+
+<div class="about-now">
+<h4>What I’m doing now</h4>
+<ul>
+<li>Building and maintaining enterprise-grade iOS applications</li>
+<li>Improving app performance, security, and stability</li>
+<li>Learning advanced SwiftUI and modern iOS architecture patterns</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
     <section id="experience" class="experience-section">
-      <h2 class="section-title">Experience</h2>
+  <h2 class="section-title">Experiences</h2>
 
-      <div class="timeline">
-        <div class="timeline-line"></div>
+  <div class="timeline">
 
-        <!-- Experience 1 -->
-        <div class="timeline-item left">
-          <div class="experience-card card">
-            <div class="role">
-              <img src="images/infosys.png" alt="Infosys" />
-              <div>
-                <h3>Software Engineer – Mobile (iOS)</h3>
-                <p class="company">Infosys • India</p>
-              </div>
-            </div>
+    <!-- Timeline line -->
+    <div class="timeline-line"></div>
 
-            <p class="description">
-              Built and maintained enterprise-grade iOS applications with a focus on
-              performance, security, and maintainability.
-            </p>
-
-            <ul>
-              <li>Developed modular iOS apps using Swift, UIKit, SwiftUI, and MVVM</li>
-              <li>Integrated secure APIs, authentication, and encryption</li>
-              <li>Reduced crashes through profiling, logging, and optimizations</li>
-            </ul>
+    <!-- Experience 1 (Left) -->
+    <div class="timeline-item left">
+      <div class="experience-card">
+        <div class="role">
+          <img src="images/company1.png" alt="Company logo" />
+          <div>
+            <h3>Software Engineer – Mobile (iOS)</h3>
+            <p class="company">Infosys • India</p>
           </div>
-
-          <span class="timeline-date">JUNE 2022 — PRESENT</span>
         </div>
 
-        <!-- Experience 2 -->
-        <div class="timeline-item right">
-          <div class="experience-card card">
-            <div class="role">
-              <img src="images/mobile.png" alt="Mobile Projects" />
-              <div>
-                <h3>Mobile Application Developer</h3>
-                <p class="company">Client & Personal Projects</p>
-              </div>
-            </div>
+        <p class="description">
+          Built and maintained enterprise-grade iOS applications used by thousands of users,
+          focusing on performance, security, and scalability.
+        </p>
 
-            <p class="description">
-              Delivered end-to-end mobile applications, collaborating with designers and
-              backend engineers to ship production-ready features.
-            </p>
-
-            <ul>
-              <li>Built Android and iOS features for real-world use cases</li>
-              <li>Handled testing, App Store releases, and maintenance</li>
-              <li>Worked directly with stakeholders on requirements</li>
-            </ul>
-          </div>
-
-          <span class="timeline-date">JAN 2021 — MAY 2022</span>
-        </div>
+        <ul>
+          <li>Developed modular iOS apps using Swift, UIKit, and MVVM architecture</li>
+          <li>Integrated secure APIs, authentication, and encryption mechanisms</li>
+          <li>Improved app performance and reduced crash rate through profiling and optimization</li>
+        </ul>
       </div>
-    </section>
+      <span class="timeline-date">JUNE 2022 — PRESENT</span>
+    </div>
 
-    <!-- ================= PROJECTS ================= -->
+    <!-- Experience 2 (Right) -->
+    <div class="timeline-item right">
+      <div class="experience-card">
+        <div class="role">
+          <img src="images/company2.png" alt="Company logo" />
+          <div>
+            <h3>Mobile Application Developer</h3>
+            <p class="company">Startup / Client Projects</p>
+          </div>
+        </div>
+
+        <p class="description">
+          Delivered end-to-end mobile solutions for clients, handling development,
+          testing, and deployment.
+        </p>
+
+        <ul>
+          <li>Built production-ready Android and iOS features</li>
+          <li>Collaborated with designers and backend teams</li>
+          <li>Published and maintained apps on the App Store</li>
+        </ul>
+      </div>
+      <span class="timeline-date">JAN 2021 — MAY 2022</span>
+    </div>
+
+  </div>
+</section>
+
+
     <section id="projects">
       <h2>Projects</h2>
-
-      <div class="grid grid-auto">
-        <div class="card project-card">
-          <img src="images/ios-security-app.png" alt="iOS Security App" />
+      <div class="grid">
+        <div class="card">
+          <img src="images/ios-security-app.png" alt="Mobile Security iOS App Screenshot" />
           <h3>Mobile Security iOS App</h3>
           <p>
-            Enterprise-grade iOS app with encrypted APIs, certificate pinning,
+            Enterprise-grade iOS application with encrypted APIs, certificate pinning,
             biometric authentication, and QR-based OTP approval.
           </p>
-          <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
+          <p>
+            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
+          </p>
         </div>
 
-        <div class="card project-card">
-          <img src="images/swiftui-combine-app.png" alt="SwiftUI Combine App" />
+        <div class="card">
+          <img src="images/swiftui-combine-app.png" alt="SwiftUI Combine App Screenshot" />
           <h3>SwiftUI + Combine Demo</h3>
           <p>
-            Reactive SwiftUI app using Combine, MVVM, and clean state management.
+            Personal iOS project exploring reactive UI patterns using SwiftUI and Combine,
+            with clean MVVM architecture and state management.
           </p>
-          <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
+          <p>
+            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
+          </p>
         </div>
 
-        <div class="card project-card">
-          <img src="images/prezence-android-app.png" alt="Android Attendance App" />
+        <div class="card">
+          <img src="images/prezence-android-app.png" alt="Prezence Android App Screenshot" />
           <h3>Prezence – Attendance App</h3>
           <p>
-            Android app with payments, maps, QR scanning, Firebase notifications,
-            and AWS GraphQL APIs.
+            Android application built from scratch with payments, maps, QR scanning,
+            Firebase notifications, and AWS GraphQL APIs.
           </p>
-          <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
+          <p>
+            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ================= SKILLS ================= -->
     <section>
       <h2>Skills</h2>
       <div class="skills">
@@ -223,27 +567,38 @@
         <span>Azure DevOps</span>
       </div>
     </section>
+  </div>
+  <footer>
+     <h2 class="contact-title">REACH ME OUT</h2>
+        <div class="contact-icons">
+  <!-- Email -->
+  <a href="mailto:nazminparween23@gmail.com" aria-label="Email">
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M4 4h16v16H4z" fill="none"/>
+      <path d="M20 6l-8 5-8-5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <rect x="4" y="4" width="16" height="16" rx="2" ry="2"
+        fill="none" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </a>
 
-  </main>
+  <!-- GitHub -->
+  <a href="https://github.com/nazmin123" target="_blank" aria-label="GitHub">
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.2-3.37-1.2-.45-1.17-1.11-1.48-1.11-1.48-.9-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.36 1.11 2.94.85.1-.67.35-1.11.64-1.36-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.32.1-2.75 0 0 .84-.27 2.75 1.05a9.2 9.2 0 012.5-.35c.85 0 1.7.12 2.5.35 1.9-1.32 2.75-1.05 2.75-1.05.55 1.43.2 2.5.1 2.75.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.05.36.32.68.95.68 1.92v2.85c0 .27.18.6.69.49A10.01 10.01 0 0022 12.26C22 6.58 17.52 2 12 2z"
+        fill="currentColor"/>
+    </svg>
+  </a>
 
-  <!-- ================= FOOTER ================= -->
-  <footer id="contact">
-    <h2 class="contact-title">REACH ME OUT</h2>
-
-    <div class="contact-icons">
-      <a href="mailto:nazminparween23@gmail.com" aria-label="Email">✉️</a>
-      <a href="https://github.com/nazmin123" target="_blank" aria-label="GitHub">🐙</a>
-      <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/"
-         target="_blank" aria-label="LinkedIn">in</a>
-    </div>
-
-    <p>
-      © 2025 Nazmin Parween · Senior Mobile Developer · Immediate Joiner
-    </p>
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/" target="_blank" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" class="icon">
+      <path d="M4.98 3.5a2.48 2.48 0 11-.01 4.96 2.48 2.48 0 01.01-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.79v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.63 4.74 6.05V21h-3.96v-5.3c0-1.27-.03-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9.5z"
+        fill="currentColor"/>
+    </svg>
+  </a>
+</div>
+    <p>© 2025 Nazmin Parween · Senior Mobile Developer · Immediate Joiner</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="js/timeline.js" defer></script>
 
 </body>
 </html>
