@@ -155,6 +155,7 @@
   margin-bottom: 8px;
   color: #e5e7eb;
 }
+    
 
 /* /* Date */
 /* .timeline-date {
@@ -166,20 +167,46 @@
 }  */
 
     /* Date */
-.timeline-date {
+/* .timeline-date {
   position: absolute;
   margin: 12px 0;
   font-size: 13px;
   color: #9ca3af;
+} */
+    /* Timeline Date – Correct Positioning */
+
+/* Common */
+.timeline-date {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #9ca3af;
+  white-space: nowrap;
 }
 
+/* LEFT card → date on RIGHT side of timeline */
+.timeline-item.left .timeline-date {
+  left: 50%;
+  margin-left: 36px;
+  text-align: left;
+}
+
+/* RIGHT card → date on LEFT side of timeline */
+.timeline-item.right .timeline-date {
+  right: 50%;
+  margin-right: 36px;
+  text-align: right;
+}
+
+/* 
 .timeline-item.left .timeline-date {
   right: 48%;
 }
 
 .timeline-item.right .timeline-date {
   left: 48%;
-}
+} */
 
 /* Mobile Responsive */
 @media (max-width: 900px) {
