@@ -42,6 +42,41 @@
       color: #9ca3af;
       position: relative;
     }
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-left: 24px;
+  font-size: 15px;
+  color: #9ca3af;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+/* Active / selected link */
+.nav-link.active {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.25s ease;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
 
     .resume-btn {
       padding: 10px 16px;
@@ -375,7 +410,7 @@ border: 1px solid #1f2937;
 </head>
 <body>
 
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="nav-container">
       <div class="logo">Nazmin Mobile App Developer</div>
       <div class="nav-links">
@@ -385,9 +420,20 @@ border: 1px solid #1f2937;
         <a href="#projects">Projects</a>
       </div>
     </div>
-  </nav>
+  </nav> -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Nazmin · Mobile Developer</div>
 
-  <div class="container hero">
+    <div class="nav-links">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+    </div>
+  </div>
+</nav>
+  <div id="home" class="container hero">
     <span class="badge">● Mobile-first. Security-driven.</span>
     <h1>
       Build. <span class="grad1">Secure.</span><br/>
