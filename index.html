@@ -155,25 +155,6 @@
   margin-bottom: 8px;
   color: #e5e7eb;
 }
-    
-
-/* /* Date */
-/* .timeline-date {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 13px;
-  color: #9ca3af;
-}  */
-
-    /* Date */
-/* .timeline-date {
-  position: absolute;
-  margin: 12px 0;
-  font-size: 13px;
-  color: #9ca3af;
-} */
-    /* Timeline Date – Correct Positioning */
 
 /* Common */
 .timeline-date {
@@ -198,15 +179,6 @@
   margin-right: 36px;
   text-align: right;
 }
-
-/* 
-.timeline-item.left .timeline-date {
-  right: 48%;
-}
-
-.timeline-item.right .timeline-date {
-  left: 48%;
-} */
 
 /* Mobile Responsive */
 @media (max-width: 900px) {
@@ -281,6 +253,44 @@
     }
 
     h2 { font-size: 32px; margin-bottom: 40px; }
+
+    
+
+/* About Section */
+.about-section {
+position: relative;
+}
+
+
+.about-header {
+text-align: left;
+margin-bottom: 80px;
+}
+
+
+.about-title {
+font-size: 32px;
+background: linear-gradient(135deg, #22c55e, #38bdf8);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+
+.about-content {
+display: grid;
+grid-template-columns: 360px 1fr;
+gap: 64px;
+align-items: center;
+}
+
+
+.about-image img {
+width: 100%;
+border-radius: 20px;
+border: 1px solid #1f2937;
+}
+    
     
     /* Skills */
     .skills span {
@@ -337,17 +347,6 @@
       color: #9ca3af;
       margin-bottom: 32px;
     }
-    /* .contact-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 32px;
-    } */
-    /* .contact-icons a {
-      font-size: 28px;
-      color: #e5e7eb;
-      transition: transform 0.2s ease, color 0.2s ease;
-    } */
     .contact-icons a:hover {
       color: #38bdf8;
       transform: translateY(-4px);
@@ -411,45 +410,60 @@
   </div>
 
   <div class="container">
-    <section id="about">
+    <!-- <section id="about">
       <h2>About</h2>
       <p style="max-width: 800px; color:#9ca3af;">
         I am a result-driven Mobile Application Developer with hands-on experience in building
         secure, scalable, and high-performance applications. My background in Site Reliability
         Engineering helps me design systems that are observable, resilient, and production-ready.
       </p>
-    </section>
-<!-- 
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Senior System Engineer – iOS</h3>
-          <p><strong>Infosys</strong> · Feb 2023 – Present</p>
-          <p>
-            Building secure enterprise iOS applications using Swift, UIKit, MVVM + Clean Architecture.
-            Implemented certificate pinning, biometric authentication, and OTP workflows.
-          </p>
-        </div>
-        <div class="card">
-          <h3>System Engineer – SRE</h3>
-          <p><strong>Infosys</strong> · Dec 2021 – Jan 2023</p>
-          <p>
-            Monitored large-scale production systems using Splunk, New Relic, and AppDynamics.
-            Performed root cause analysis for crashes and performance issues.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Android Developer</h3>
-          <p><strong>Mobil80</strong> · Jun 2020 – Nov 2021</p>
-          <p>
-            Developed and published Android applications from scratch with payments,
-            QR scanning, Firebase, and AWS GraphQL APIs.
-          </p>
-        </div>
-      </div>
     </section> -->
+    <section id="about" class="about-section">
+<div class="about-header">
+<h2 class="about-title">About Me</h2>
+<p class="about-subtitle">A story of growth, learning, and building real-world mobile apps</p>
+</div>
 
+
+<div class="about-content">
+<div class="about-image">
+<img src="images/profile.jpg" alt="Nazmin Parween" />
+</div>
+
+
+<div class="about-text">
+<h3>Nazmin Parween</h3>
+<p class="about-role">Senior Mobile Application Developer</p>
+
+
+<p>
+I’m a mobile developer focused on building <strong>secure, scalable, and production-ready</strong>
+applications. My primary expertise is in <strong>iOS development</strong>, where I work across
+UIKit and SwiftUI to deliver smooth, reliable user experiences.
+</p>
+
+
+<p>
+With a background in <strong>Site Reliability Engineering</strong>, I approach mobile development
+with a strong emphasis on performance, observability, and long-term maintainability. I enjoy
+working close to real users and solving problems that matter.
+</p>
+
+
+<p class="about-highlight">Let’s build mobile apps that users trust and enjoy.</p>
+
+
+<div class="about-now">
+<h4>What I’m doing now</h4>
+<ul>
+<li>Building and maintaining enterprise-grade iOS applications</li>
+<li>Improving app performance, security, and stability</li>
+<li>Learning advanced SwiftUI and modern iOS architecture patterns</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
     <section id="experience" class="experience-section">
   <h2 class="section-title">Experiences</h2>
 
@@ -571,17 +585,6 @@
         I’m open to iOS and Mobile Developer opportunities. Feel free to reach out for
         collaboration or full-time roles.
       </p>
-      <!-- <div class="contact-icons">
-        <a href="mailto:nazminparween23@gmail.com" aria-label="Email">
-          <span class="icon">✉️</span>
-        </a>
-        <a href="https://github.com/nazmin123" target="_blank" aria-label="GitHub">
-          <span class="icon">🐙</span>
-        </a>
-        <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/" target="_blank" aria-label="LinkedIn">
-          <span class="icon">in</span>
-        </a>
-      </div> -->
     <div class="contact-icons">
   <!-- Email -->
   <a href="mailto:nazminparween23@gmail.com" aria-label="Email">
