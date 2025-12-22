@@ -289,10 +289,18 @@
 
     h2 { font-size: 32px; margin-bottom: 40px; }
 
-    
+    .section-heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: left;
+
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* About Section */
-.about-section {
+/* .about-section {
 position: relative;
 }
 
@@ -308,7 +316,7 @@ font-size: 32px;
 background: linear-gradient(135deg, #22c55e, #38bdf8);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-}
+} */
 
 
 
@@ -493,9 +501,10 @@ border: 1px solid #1f2937;
 
   <div class="container">
     <section id="about" class="about-section">
-<div class="about-header">
+<!-- <div class="about-header">
 <h2 class="about-title">About Me</h2>
-</div>
+</div> -->
+<h2 class="section-heading">About Me</h2>
 
 
 <div class="about-content">
@@ -538,7 +547,8 @@ working close to real users and solving problems that matter.
 </div>
 </section>
     <section id="experience" class="experience-section">
-  <h2 class="section-title">Experiences</h2>
+<!-- <h2 class="section-title">Experiences</h2> -->
+<h2 class="section-heading">Experience</h2>
 
   <div class="timeline">
 
@@ -600,7 +610,9 @@ working close to real users and solving problems that matter.
 
 
     <section id="projects">
-      <h2>Projects</h2>
+      <!-- <h2>Projects</h2> -->
+      <h2 class="section-heading">Projects</h2>
+
       <div class="grid">
     <div class="card">
       <img src="images/ios-security-app.png" alt="Mobile Security iOS App Screenshot" />
@@ -652,7 +664,7 @@ working close to real users and solving problems that matter.
         </a>
       </div>
     </div>
-
+     <!-- Project 3 -->
         <div class="card">
           <img src="images/swiftui-combine-app.png" alt="SwiftUI Combine App Screenshot" />
           <h3>SwiftUI + Combine Demo</h3>
@@ -669,22 +681,12 @@ working close to real users and solving problems that matter.
           </p>
         </div>
 
-        <div class="card">
-          <img src="images/prezence-android-app.png" alt="Prezence Android App Screenshot" />
-          <h3>Prezence – Attendance App</h3>
-          <p>
-            Android application built from scratch with payments, maps, QR scanning,
-            Firebase notifications, and AWS GraphQL APIs.
-          </p>
-          <p>
-            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
-          </p>
-        </div>
       </div>
     </section>
 
    <section id="expertise">
-      <h2>Skills</h2>
+     <h2 class="section-heading">Expertise</h2>
+
       <div class="skills">
         <span>Swift</span><span>UIKit</span><span>SwiftUI</span><span>Combine</span>
         <span>MVVM</span><span>Clean Architecture</span><span>XCTest</span>
