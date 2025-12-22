@@ -645,6 +645,35 @@ working close to real users and solving problems that matter.
 </div>
     <p>© 2025 Nazmin Parween · Senior Mobile Developer · Immediate Joiner</p>
   </footer>
+  <!-- Navbar active link logic -->
+  <script>
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section, .hero");
 
+    /* Handle click */
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+
+    /* Handle scroll */
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              const id = link.getAttribute("href").substring(1);
+              link.classList.toggle("active", id === entry.target.id);
+            });
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
