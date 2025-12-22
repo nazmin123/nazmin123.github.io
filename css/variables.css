@@ -1,0 +1,27 @@
+:root {
+  /* Colors */
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --border-muted: #1f2937;
+
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+
+  --accent-blue: #38bdf8;
+  --accent-green: #22c55e;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 64px;
+  --space-xl: 120px;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+
+  /* Layout */
+  --container-width: 1100px;
+}
