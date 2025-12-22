@@ -1,0 +1,24 @@
+/* Hero */
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.05;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+
+/* About */
+.about-content {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+/* Projects */
+.project-card img {
+  border-radius: 12px;
+  border: 1px solid var(--border-muted);
+}
