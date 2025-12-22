@@ -104,17 +104,6 @@
 
     h2 { font-size: 32px; margin-bottom: 40px; }
 
-       /* Skills */
-    .skills span {
-      display: inline-block;
-      margin: 6px 8px 0 0;
-      padding: 6px 12px;
-      font-size: 14px;
-      border-radius: 999px;
-      background: #020617;
-      border: 1px solid #1f2937;
-    }
-    
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -143,7 +132,32 @@
       border-top: 1px solid #1f2937;
       color: #6b7280;
     }
-   
+
+    /* Contact */
+    .contact {
+      text-align: center;
+    }
+    .contact-title {
+      letter-spacing: 0.3em;
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 32px;
+    }
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+    .contact-icons a {
+      font-size: 28px;
+      color: #e5e7eb;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .contact-icons a:hover {
+      color: #38bdf8;
+      transform: translateY(-4px);
+    }
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 42px; }
@@ -181,7 +195,7 @@
     </p>
     <div class="hero-links">
       <a class="resume-btn" href="resume.pdf" target="_blank">Resume ⬇</a>
-      <a href="#projects">More About Me</a>
+      <a href="#projects">View projects</a>
     </div>
   </div>
   </div>
@@ -279,17 +293,19 @@
     </section>
   </div>
 
-  <section id="contact">
-      <h2>Contact</h2>
-      <p style="color:#9ca3af; max-width:600px;">
-        I’m open to iOS and Mobile Developer opportunities. Feel free to reach out for
-        collaboration or full-time roles.
-      </p>
-      <p>
-        <a href="mailto:nazminparween23@gmail.com">nazminparween23@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/" target="_blank">LinkedIn</a> ·
-        <a href="https://github.com/nazmin123" target="_blank">GitHub</a>
-      </p>
+  <section id="contact" class="contact">
+      <h2 class="contact-title">REACH ME OUT</h2>
+      <div class="contact-icons">
+        <a href="mailto:nazminparween23@gmail.com" aria-label="Email">
+          <span class="icon">✉️</span>
+        </a>
+        <a href="https://github.com/nazmin123" target="_blank" aria-label="GitHub">
+          <span class="icon">🐙</span>
+        </a>
+        <a href="https://www.linkedin.com/in/nazmin-parween-5887841ab/" target="_blank" aria-label="LinkedIn">
+          <span class="icon">in</span>
+        </a>
+      </div>
     </section>
   </div>
 
