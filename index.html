@@ -339,8 +339,11 @@ border: 1px solid #1f2937;
 
 .project-links {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
 }
+
 
 .btn-primary {
   padding: 10px 14px;
@@ -599,18 +602,6 @@ working close to real users and solving problems that matter.
     <section id="projects">
       <h2>Projects</h2>
       <div class="grid">
-        <!-- <div class="card">
-          <img src="images/ios-security-app.png" alt="Mobile Security iOS App Screenshot" />
-          <h3>Mobile Security iOS App</h3>
-          <p>
-            Enterprise-grade iOS application with encrypted APIs, certificate pinning,
-            biometric authentication, and QR-based OTP approval.
-          </p>
-          <p>
-            <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
-          </p>
-        </div> -->
-            <!-- Project 1 -->
     <div class="card">
       <img src="images/ios-security-app.png" alt="Mobile Security iOS App Screenshot" />
 
@@ -636,16 +627,44 @@ working close to real users and solving problems that matter.
       </div>
     </div>
 
+    <!-- Project 2 -->
+    <div class="card">
+      <img src="images/prezence-android-app.png" alt="Prezence Android App Screenshot" />
 
+      <h3>Prezence – Attendance App</h3>
+
+      <p class="project-desc">
+        A production-ready Android application for attendance tracking,
+        payments, and real-time notifications used by organizations.
+      </p>
+
+      <p class="project-tech">
+        <strong>Technologies:</strong> Kotlin, Android SDK, Firebase,
+        Google Maps, AWS AppSync, QR Scanner
+      </p>
+
+      <div class="project-links">
+        <a href="https://official-website.com" target="_blank" class="btn-primary">
+          View Project
+        </a>
+        <a href="https://play.google.com/" target="_blank" class="btn-secondary">
+          Play Store
+        </a>
+      </div>
+    </div>
 
         <div class="card">
           <img src="images/swiftui-combine-app.png" alt="SwiftUI Combine App Screenshot" />
           <h3>SwiftUI + Combine Demo</h3>
-          <p>
-            Personal iOS project exploring reactive UI patterns using SwiftUI and Combine,
-            with clean MVVM architecture and state management.
-          </p>
-          <p>
+          <p class="project-desc">
+        A production-ready Android application for attendance tracking,
+        payments, and real-time notifications used by organizations.
+      </p>
+
+      <p class="project-tech">
+        <strong>Technologies:</strong> Kotlin, Android SDK, Firebase,
+        Google Maps, AWS AppSync, QR Scanner
+      </p>
             <a href="https://github.com/nazmin123" target="_blank">View on GitHub →</a>
           </p>
         </div>
