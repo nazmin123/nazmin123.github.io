@@ -52,6 +52,149 @@
       border: none;
       box-shadow: 0 0 24px rgba(14,165,233,0.35);
     }
+/* Experience Section */
+.experience-section {
+  padding: 120px 24px;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 80px;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Vertical Line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #38bdf8,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.right {
+  justify-content: flex-end;
+}
+
+/* Experience Card */
+.experience-card {
+  width: 460px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+}
+
+/* Role Header */
+.role {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.role img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.role h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.company {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Description */
+.description {
+  font-size: 14px;
+  color: #cbd5f5;
+  margin: 12px 0;
+}
+
+/* Bullet Points */
+.experience-card ul {
+  padding-left: 18px;
+}
+
+.experience-card li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #e5e7eb;
+}
+
+/* Date */
+.timeline-date {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.timeline-item.left .timeline-date {
+  right: 48%;
+}
+
+.timeline-item.right .timeline-date {
+  left: 48%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+
+  .timeline-date {
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: 12px;
+  }
+
+  .experience-card {
+    width: 100%;
+  }
+}
 
     /* Layout */
     .container { max-width: 1100px; margin: auto; padding: 120px 24px; }
@@ -104,7 +247,17 @@
 
     h2 { font-size: 32px; margin-bottom: 40px; }
     
-
+    /* Skills */
+    .skills span {
+      display: inline-block;
+      margin: 6px 8px 0 0;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 999px;
+      background: #020617;
+      border: 1px solid #1f2937;
+    }
+    
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -169,7 +322,7 @@
 
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">Nazmin</div>
+      <div class="logo">Nazmin Mobile App Developer</div>
       <div class="nav-links">
         <a href="resume.pdf" class="resume-btn" target="_blank">Resume</a>
         <a href="#about">About</a>
@@ -210,7 +363,7 @@
         Engineering helps me design systems that are observable, resilient, and production-ready.
       </p>
     </section>
-
+<!-- 
     <section id="experience">
       <h2>Experience</h2>
       <div class="grid">
@@ -239,7 +392,69 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <section id="experience" class="experience-section">
+  <h2 class="section-title">Experiences</h2>
+
+  <div class="timeline">
+
+    <!-- Timeline line -->
+    <div class="timeline-line"></div>
+
+    <!-- Experience 1 (Left) -->
+    <div class="timeline-item left">
+      <div class="experience-card">
+        <div class="role">
+          <img src="images/company1.png" alt="Company logo" />
+          <div>
+            <h3>Software Engineer – Mobile (iOS)</h3>
+            <p class="company">Infosys • India</p>
+          </div>
+        </div>
+
+        <p class="description">
+          Built and maintained enterprise-grade iOS applications used by thousands of users,
+          focusing on performance, security, and scalability.
+        </p>
+
+        <ul>
+          <li>Developed modular iOS apps using Swift, UIKit, and MVVM architecture</li>
+          <li>Integrated secure APIs, authentication, and encryption mechanisms</li>
+          <li>Improved app performance and reduced crash rate through profiling and optimization</li>
+        </ul>
+      </div>
+      <span class="timeline-date">JUNE 2022 — PRESENT</span>
+    </div>
+
+    <!-- Experience 2 (Right) -->
+    <div class="timeline-item right">
+      <div class="experience-card">
+        <div class="role">
+          <img src="images/company2.png" alt="Company logo" />
+          <div>
+            <h3>Mobile Application Developer</h3>
+            <p class="company">Startup / Client Projects</p>
+          </div>
+        </div>
+
+        <p class="description">
+          Delivered end-to-end mobile solutions for clients, handling development,
+          testing, and deployment.
+        </p>
+
+        <ul>
+          <li>Built production-ready Android and iOS features</li>
+          <li>Collaborated with designers and backend teams</li>
+          <li>Published and maintained apps on the App Store</li>
+        </ul>
+      </div>
+      <span class="timeline-date">JAN 2021 — MAY 2022</span>
+    </div>
+
+  </div>
+</section>
+
 
     <section id="projects">
       <h2>Projects</h2>
